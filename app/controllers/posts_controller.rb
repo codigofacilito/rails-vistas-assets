@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  layout :set_layout
 
   # GET /posts or /posts.json
   def index
@@ -66,5 +67,9 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:title, :body, :cover)
+    end
+
+    def set_layout
+      %w(show).include?(action_name) ? "landing" : "application"
     end
 end
