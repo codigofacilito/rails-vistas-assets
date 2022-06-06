@@ -4,4 +4,8 @@
   background-image: url(#{asset_path('bg.jpeg')});
   background-size: cover;
   color: white;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
