@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<h1><%= @post.title %></h1>
+<%= @post.content %>
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |

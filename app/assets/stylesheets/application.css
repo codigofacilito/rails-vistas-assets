@@ -13,5 +13,6 @@
  *= require app
  *= require containers
  *= require components
+ *=require actiontext
  *= require_self
  */
