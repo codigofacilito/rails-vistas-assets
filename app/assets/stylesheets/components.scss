@@ -1,0 +1,19 @@
+.cover {
+  background-image: url(#{asset_path('bg.jpeg')
+});
+background-size: cover;
+color: white;
+min-height: 350px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.post {
+  // Material design like ward with css
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 350px;
+}
