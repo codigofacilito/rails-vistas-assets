@@ -1,17 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<header class="cover p-4">
+<header class="cover p-4 mb-4">
   <h1>Mi blog personal</h1>
 </header>
 
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New post", new_post_path %>
+<section class="p-4">
+  <header>
+    <h2> Últimas publiaciones </h2>
+  </header>
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    <% end %>
+  </div>
+  
+  <%= link_to "New post", new_post_path %>
+</section>
