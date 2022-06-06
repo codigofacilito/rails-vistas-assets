@@ -11,6 +11,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section class="layout">
+      <header class="main-nav">
+        <nav>
+          <%=link_to "Inicio", root_path%>
+          <%=link_to "Artículos", posts_path %>
+        </nav>
+      </header>
+      <main><%= yield %></main>
+      <footer>
+        <p>MiBlog &copy; <%= Time.now.year %></p>
+      </footer>
+    </section>
   </body>
 </html>
