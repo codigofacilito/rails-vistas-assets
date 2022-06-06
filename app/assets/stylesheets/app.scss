@@ -1,1 +1,7 @@
 @import "bootstrap";
+
+.cover{
+  background-image: url(#{asset_path('bg.jpeg')});
+  background-size: cover;
+  color: white;
+}
