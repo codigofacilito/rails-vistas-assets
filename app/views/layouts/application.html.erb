@@ -12,15 +12,18 @@
 
   <body>
     <section class="layout">
-      <header class="main-nav">
-        <nav>
-          <%=link_to "Inicio", root_path%>
-          <%=link_to "Artículos", posts_path %>
+      <header class="main-nav p-4">
+        <nav class="nav">
+          <%=link_to root_path, class:"nav-link" do%>
+            <img src="/logo.png" alt="Logo de Código Facilito", height="18">
+          <%end%>
+          <%=link_to "Inicio", root_path, class:"nav-link"%></li>
+          <%=link_to "Artículos", posts_path, class:"nav-link" %>
         </nav>
       </header>
-      <main><%= yield %></main>
-      <footer>
-        <p>MiBlog &copy; <%= Time.now.year %></p>
+      <main class="p-4"><%= yield %></main>
+      <footer class="bg-dark p-4 text-white">
+        <p class="m-0">MiBlog &copy; <%= Time.now.year %></p>
       </footer>
     </section>
   </body>
