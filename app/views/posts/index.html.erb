@@ -10,7 +10,7 @@
     <h2> Últimas publiaciones </h2>
     
   </header>
-  <div id="posts">
+  <div id="posts" class="d-flex gap-3 justify-content-center">
     <%#= render partial: "posts/post", collection: @posts %>
     <%= render partial: "posts/card", collection: @posts, as: :post %>
   </div>

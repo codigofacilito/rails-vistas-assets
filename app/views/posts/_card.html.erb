@@ -1,4 +1,15 @@
-<article class="post">
-  <p class="h2"><%= post.title %></p>
+<article class="post <%=('no-cover' unless post.cover.attached?)%>">
+  <% if post.cover.attached? %>
+    <div class="post--cover" style="background-image:url(<%= url_for(post.cover) %>)"></div>
+  <%end%>
+  <div class="post--body p-3">
+    <p class="h2 m-0"><%= post.title %></p>
+    <p class="text-secondary">
+      <%= truncate post.title, lenght: 100 %>
+    </p>
+  </div>
+  <div class="mt-4 p-3">
+    <%= link_to "Leer más",post, class:"btn btn-outline-dark d-block"%>
+  </div>
 </article>
   
