@@ -10,11 +10,9 @@
     <h2> Últimas publiaciones </h2>
     
   </header>
-  <div id="posts" class="d-flex gap-3 justify-content-center">
+  <div id="posts" class="d-flex gap-3 sjustify-content-center">
     <%#= render partial: "posts/post", collection: @posts %>
     <%= render partial: "posts/card", collection: @posts, as: :post %>
   </div>
-  
-  <%= link_to "New post", new_post_path %>
 </section>
 
