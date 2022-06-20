@@ -1,0 +1,14 @@
+<%= form_with(model: @comment ) do |f| %>
+  <%= f.hidden_field :post_id %>
+  <div class="field">
+    <%= f.label :title, class:"form-label" %>
+    <%= f.text_field :title, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :content, class:"form-label" %>
+    <%= f.rich_text_area :content, class:"form-control" %>
+  </div>
+  <div class="field my-2">
+    <%= f.submit "Postear comentario", class:"btn btn-primary" %>
+  </div>
+<% end %>
