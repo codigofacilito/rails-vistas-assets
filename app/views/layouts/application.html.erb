@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render "toast", message: "Hola mundo" %>
     <section class="layout">
       <header class="main-nav p-4">
         <nav class="nav">
@@ -19,6 +20,7 @@
           <%end%>
           <%=link_to "Inicio", root_path, class:"nav-link"%></li>
           <%=link_to "Artículos", posts_path, class:"nav-link" %>
+          <%= button_tag "Salúdame",id: "toast-trigger" %>
           <%= link_to "Nuevo post", new_post_path, class:"nav-link" %>
         </nav>
       </header>
