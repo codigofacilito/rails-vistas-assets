@@ -9,6 +9,9 @@
     <%= f.rich_text_area :content, class:"form-control" %>
   </div>
   <div class="field my-2">
-    <%= f.submit "Postear comentario", class:"btn btn-primary" %>
+    <%= f.button class:"btn btn-primary" do %>
+      <i class="bi bi-send-fill"></i>
+      Publicar
+    <%end%>
   </div>
 <% end %>

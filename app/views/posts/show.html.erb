@@ -10,8 +10,11 @@
 
   <div class="mt-4">
     <p class="h3">Qué opinas del tema</p>
-    <div class="my-3"><%= render @post.comments %></div>
     <%= render "comments/form" %>
+    <%= turbo_frame_tag "comments", class:'my-3' do %>
+      <%= render @post.comments %>
+    <%end%>
+    
   </div>
   
 </div>
