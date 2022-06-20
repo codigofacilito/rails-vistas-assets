@@ -7,6 +7,10 @@
     <p class="text-secondary fs-6">
       <%= time_ago_in_words post.created_at %> ago
     </p>
+    <p>
+      <strong>Por: </strong>
+      <%= post.user.email %>
+    </p>
     <%# <p>
       <%= truncate post.title, lenght: 100 
     </p> %>

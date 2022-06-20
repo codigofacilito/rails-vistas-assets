@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -70,6 +70,6 @@ class PostsController < ApplicationController
     end
 
     def set_layout
-      %w(show).include?(action_name) ? "landing" : "application"
+      # %w(show).include?(action_name) ? "landing" : "application"
     end
 end
