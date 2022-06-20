@@ -11,8 +11,12 @@
   <div class="mt-4">
     <p class="h3">Qué opinas del tema</p>
     <%= render "comments/form" %>
-    <%= turbo_frame_tag "comments", class:'my-3' do %>
-      <%= render @post.comments %>
+    <%# <%= turbo_frame_tag "comments", class:'my-3', src:"/comments?post_id=#{@post.id}" do 
+      <p>Cargando comentarios...</p>
+    <%end%> 
+
+    <%= turbo_frame_tag "comments", class:'my-3  d-block' do %>
+      <div class="text-center"><%= link_to "Cargar comentarios (#{@post.comments.count})", comments_path(post_id: @post.id) %></div>
     <%end%>
     
   </div>
